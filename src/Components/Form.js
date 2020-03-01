@@ -21,20 +21,18 @@ class Form extends Component {
         if (whichFS === 'fs2') {
             this.setState({
                 showFS2: true,
-            }, function() {
-                document.querySelector('.fs2').scrollIntoView(true);
             })
         } else if (whichFS === 'fs3') {
             this.setState({
                 showFS3: true,
             }, function() {
-                document.querySelector('.fs3').scrollIntoView(true);
+                // document.querySelector('.fs3').scrollIntoView(true);
             })
         } else if (whichFS === 'fs4') {
             this.setState({
                 showFS4: true,
             }, function() {
-                document.querySelector('.fs4').scrollIntoView(true);
+                // document.querySelector('.fs4').scrollIntoView(true);
             })
         }
     }
