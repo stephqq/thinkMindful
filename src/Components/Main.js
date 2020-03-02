@@ -23,7 +23,7 @@ class Main extends Component {
             <main className="wrapper">
                 {
                     this.state.isCreating ?
-                        <Form handleClick={this.toggleForm} /> :
+                        <Form handleClick={this.toggleForm} user={this.props.user} /> :
                         <Fragment>
                             <Button handleClick={this.toggleForm} />
                             <Library />
