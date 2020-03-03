@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Swal from 'sweetalert2';
 import Button from './Button';
 import Library from './Library';
 import Form from './Form';
@@ -13,9 +14,26 @@ class Main extends Component {
     }
 
     toggleForm = () => {
-        this.setState({
-            isCreating: !this.state.isCreating,
-        })
+        if (this.state.isCreating) {
+            Swal.fire({
+                title: 'You sure?',
+                text: 'You will lose your current progress if you leave this form.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: `I'm sure!`,
+                cancelButtonText: 'Whoops, nevermind!'
+            }).then((result) => {
+                if (result.value) {
+                    this.setState({
+                        isCreating: !this.state.isCreating,
+                    })
+                }
+            })
+        } else {
+            this.setState({
+                isCreating: !this.state.isCreating,
+            })
+        }
     }
 
     render() {

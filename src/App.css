@@ -187,11 +187,13 @@ textarea {
   border-right: 1px dashed rgba(0, 0, 0, 0.5);
 }
 
-.inputTContainer textarea {
+.inputTContainer textarea,
+.inputTContainer p {
   width: 25%;
 }
 
-.labelContainer label {
+.labelContainer label,
+.labelContainer p {
   width: 25%;
 }
 
@@ -314,18 +316,21 @@ textarea {
 .recordGallery ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .recordGallery li {
   background: rgba(255, 255, 255, 0.5);
   height: 250px;
-  width: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - (30px / 4));
   position: relative;
   word-wrap: break-word;
   overflow: hidden;
   padding: 15px;
   margin-top: 15px;
+}
+
+.recordGallery li:not(:nth-child(4n)) {
+  margin-right: 10px;
 }
 
 .openRecord {
