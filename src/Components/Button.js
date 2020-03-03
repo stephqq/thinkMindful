@@ -4,7 +4,7 @@ class Button extends Component {
     render() {
         return(
             <section className="newThRd">
-                <button onClick={this.props.handleClick}>Create new thought record</button>
+                <button onClick={this.props.handleClick}>create new thought record</button>
             </section>
         )
     }

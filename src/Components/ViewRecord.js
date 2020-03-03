@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import firebase from '../scripts/firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import EditRecord from './EditRecord';
@@ -15,9 +16,8 @@ class ViewRecord extends Component {
 
     handleClick = (e) => {
         if (e === undefined) {
-            this.setState({
-                isEditing: false
-            })
+            this.props.toggleError()
+            this.props.handleClick()
         } else if (e.target.textContent === 'delete') {
             Swal.fire({
                 title: 'You sure?',
@@ -28,8 +28,14 @@ class ViewRecord extends Component {
                 cancelButtonText: 'Whoops, nevermind!'
             }).then((result) => {
                 if (result.value) {
-                    // deletion here
-                    // isViewing state needs to be updated somehow
+                    // delete
+                    const dbRef = firebase.database().ref(`${this.props.uid}/thoughts/${this.props.record[0].key}`);
+                    dbRef.remove();
+                    if (this.state.isEditing) {
+                        this.props.toggleError()
+                    }
+                    // isViewing state needs to be updated
+                    this.props.handleClick()
                 }
             })
         } else if (this.state.isEditing && e.target.textContent === 'view') {
@@ -43,21 +49,41 @@ class ViewRecord extends Component {
             }).then((result) => {
                 if (result.value) {
                     this.setState({
-                        isEditing: false
-                    })
+                        isEditing: !this.state.isEditing
+                    }, this.props.toggleError)
                 }
             })
         } else if (!this.state.isEditing && e.target.textContent === 'edit') {
             this.setState({
-                isEditing: true
+                isEditing: !this.state.isEditing
+            }, this.props.toggleError)
+        }
+    }
+
+    handleError = (e) => {
+        if (this.state.isEditing) {
+            Swal.fire({
+                title: 'You sure?',
+                text: 'Any changes to this form will not be saved.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: `I'm sure!`,
+                cancelButtonText: 'Whoops, nevermind!'
+            }).then((result, e) => {
+                if (result.value) {
+                    this.props.toggleError()
+                    this.props.handleClick(e)
+                }
             })
+        } else {
+            this.props.handleClick(e)
         }
     }
 
     render() {
         return (
             <div className="viewRecord">
-                <FontAwesomeIcon icon={faWindowClose} className="closeForm" onClick={this.props.handleClick} />
+                <FontAwesomeIcon icon={faWindowClose} className="closeForm" onClick={this.handleError} />
                 <div className="viewOptions">
                     <button onClick={this.handleClick}>view</button>
                     <button onClick={this.handleClick}>edit</button>

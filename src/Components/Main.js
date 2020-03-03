@@ -10,11 +10,12 @@ class Main extends Component {
 
         this.state = {
             isCreating: false,
+            isEditing: false
         }
     }
 
     toggleForm = () => {
-        if (this.state.isCreating) {
+        if (this.state.isCreating || this.state.isEditing) {
             Swal.fire({
                 title: 'You sure?',
                 text: 'You will lose your current progress if you leave this form.',
@@ -36,6 +37,12 @@ class Main extends Component {
         }
     }
 
+    toggleError = () => {
+        this.setState({
+            isEditing: !this.state.isEditing
+        })
+    }
+
     render() {
         return (
             <main className="wrapper">
@@ -44,7 +51,7 @@ class Main extends Component {
                         <Form handleClick={this.toggleForm} user={this.props.user} /> :
                         <Fragment>
                             <Button handleClick={this.toggleForm} />
-                            <Library user={this.props.user} />
+                            <Library user={this.props.user} toggleError={this.toggleError} />
                         </Fragment>
                 }
             </main>

@@ -78,7 +78,7 @@ class Library extends Component {
                 {
                     this.state.isViewing
                         ?
-                            <ViewRecord handleClick={this.handleClick} record={this.state.currentRecord} uid={this.props.user.uid} />
+                            <ViewRecord handleClick={this.handleClick} record={this.state.currentRecord} uid={this.props.user.uid} toggleError={this.props.toggleError} />
                         :
                             <ViewLibrary records={this.state.records} handleClick={this.handleClick} />
                 }
