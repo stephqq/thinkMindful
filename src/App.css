@@ -39,7 +39,7 @@ ul {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -297,6 +297,49 @@ textarea {
   position: relative;
   width: calc(50% - 30px);
   margin: 0 15px; }
+
+/* MAIN: SECTION: LIBRARY STYLING */
+
+.thRdLibrary h2 {
+  font-family: 'Emilys Candy';
+}
+
+.recordGallery h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-family: 'Emilys Candy';
+}
+
+.recordGallery ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recordGallery li {
+  background: rgba(255, 255, 255, 0.5);
+  height: 250px;
+  width: calc(100% / 4 - 10px);
+  position: relative;
+  word-wrap: break-word;
+  overflow: hidden;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.openRecord {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.viewRecord {
+  display: flex;
+  flex-direction: column;
+}
 
 /* FOOTER STYLING */
 

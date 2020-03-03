@@ -26,7 +26,7 @@ class Main extends Component {
                         <Form handleClick={this.toggleForm} user={this.props.user} /> :
                         <Fragment>
                             <Button handleClick={this.toggleForm} />
-                            <Library />
+                            <Library user={this.props.user} />
                         </Fragment>
                 }
             </main>
