@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6e2efd436800d01b87085fa10e6ce2cb",
+    "revision": "88843b1b86a62a382c58e5b468ffa177",
     "url": "/thinkMindful/index.html"
   },
   {
-    "revision": "2b94ad02f819a90935c4",
-    "url": "/thinkMindful/static/css/main.1366ce57.chunk.css"
+    "revision": "d7e1ccbfa62a0c0c427d",
+    "url": "/thinkMindful/static/css/main.db56a531.chunk.css"
   },
   {
     "revision": "d80c2b192457fe22f2fe",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/thinkMindful/static/js/2.e17e4414.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2b94ad02f819a90935c4",
-    "url": "/thinkMindful/static/js/main.84fd4e85.chunk.js"
+    "revision": "d7e1ccbfa62a0c0c427d",
+    "url": "/thinkMindful/static/js/main.38123dcf.chunk.js"
   },
   {
     "revision": "c9bfe6d8829125110f3d",
