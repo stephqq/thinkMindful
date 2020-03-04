@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/thinkMindful/precache-manifest.48370e7fb568b63270165a1de24dfe82.js"
+  "/thinkMindful/precache-manifest.1b2ec23f0decd3714ca2d1cecdc017a1.js"
 );
 
 self.addEventListener('message', (event) => {

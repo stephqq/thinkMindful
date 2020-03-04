@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/thinkMindful/static/css/main.ff5fdd28.chunk.css",
-    "main.js": "/thinkMindful/static/js/main.726c0325.chunk.js",
-    "main.js.map": "/thinkMindful/static/js/main.726c0325.chunk.js.map",
+    "main.css": "/thinkMindful/static/css/main.1366ce57.chunk.css",
+    "main.js": "/thinkMindful/static/js/main.84fd4e85.chunk.js",
+    "main.js.map": "/thinkMindful/static/js/main.84fd4e85.chunk.js.map",
     "runtime-main.js": "/thinkMindful/static/js/runtime-main.8da75973.js",
     "runtime-main.js.map": "/thinkMindful/static/js/runtime-main.8da75973.js.map",
-    "static/js/2.f09a89b3.chunk.js": "/thinkMindful/static/js/2.f09a89b3.chunk.js",
-    "static/js/2.f09a89b3.chunk.js.map": "/thinkMindful/static/js/2.f09a89b3.chunk.js.map",
+    "static/js/2.e17e4414.chunk.js": "/thinkMindful/static/js/2.e17e4414.chunk.js",
+    "static/js/2.e17e4414.chunk.js.map": "/thinkMindful/static/js/2.e17e4414.chunk.js.map",
     "index.html": "/thinkMindful/index.html",
-    "precache-manifest.48370e7fb568b63270165a1de24dfe82.js": "/thinkMindful/precache-manifest.48370e7fb568b63270165a1de24dfe82.js",
+    "precache-manifest.1b2ec23f0decd3714ca2d1cecdc017a1.js": "/thinkMindful/precache-manifest.1b2ec23f0decd3714ca2d1cecdc017a1.js",
     "service-worker.js": "/thinkMindful/service-worker.js",
-    "static/css/main.ff5fdd28.chunk.css.map": "/thinkMindful/static/css/main.ff5fdd28.chunk.css.map",
-    "static/js/2.f09a89b3.chunk.js.LICENSE.txt": "/thinkMindful/static/js/2.f09a89b3.chunk.js.LICENSE.txt"
+    "static/css/main.1366ce57.chunk.css.map": "/thinkMindful/static/css/main.1366ce57.chunk.css.map",
+    "static/js/2.e17e4414.chunk.js.LICENSE.txt": "/thinkMindful/static/js/2.e17e4414.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8da75973.js",
-    "static/js/2.f09a89b3.chunk.js",
-    "static/css/main.ff5fdd28.chunk.css",
-    "static/js/main.726c0325.chunk.js"
+    "static/js/2.e17e4414.chunk.js",
+    "static/css/main.1366ce57.chunk.css",
+    "static/js/main.84fd4e85.chunk.js"
   ]
 }
