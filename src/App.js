@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import firebase, { auth, provider } from './scripts/firebase';
+import firebase, { auth } from './scripts/firebase';
+import * as firebaseui from 'firebaseui';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import './App.css';
 import Header from './Components/Header';
 import Main from './Components/Main';
@@ -22,14 +24,17 @@ class App extends Component {
     })
   }
 
-  login = () => {
-    auth.signInWithPopup(provider)
-      .then((result) => {
-        const user = result.user;
-        this.setState({
-          user
-        })
-      })
+  uiConfig = {
+    signInFlow: 'popup',
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+      // Avoid redirects after sign-in.
+      signInSuccessWithAuthResult: () => false
+    },
+    credentialHelper: firebaseui.auth.CredentialHelper.NONE
   }
 
   logout = () => {
@@ -46,7 +51,6 @@ class App extends Component {
       <Fragment>
         <Header 
           userDetails={this.state.user}
-          logIn={this.login}
           logOut={this.logout}
         />
         {
@@ -57,8 +61,16 @@ class App extends Component {
             </Fragment>
             :
             <main className="wrapper">
-              <section>
-                <p>hi i need to make some outside facing content about this project.</p>
+              <section className="logInSection">
+                <div className="logInContainer">
+                  <p>Welcome to think mindful!</p>
+                  <p>For a demo of this app please use the following credentials:</p>
+                  <p>username: demothinkmindful@gmail.com</p>
+                  <p>password: demojuno</p>
+                </div>
+                <div className="logInContainer">
+                  <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
+                </div>
               </section>
             </main>
         }

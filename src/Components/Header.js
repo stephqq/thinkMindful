@@ -13,9 +13,7 @@ const Header = (props) => {
                             <button onClick={props.logOut}>log out</button>
                         </div>
                     :
-                        <div className="userDeets">
-                            <button onClick={props.logIn}>log in</button>
-                        </div>
+                        null
             }
         </header>
     )

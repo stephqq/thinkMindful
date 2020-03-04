@@ -95,27 +95,27 @@ class ViewRecord extends Component {
                         <EditRecord record={this.props.record} uid={this.props.uid} handleClick={this.handleClick} />
                         :
                         <Fragment>
-                        <h2>{this.props.record[0].date}</h2>
-                        <h3>Situation/Trigger</h3>
-                        <p>{this.props.record[0].situation}</p>
-                        <h3>Re-evaluated Outcome</h3>
-                        <p>{this.props.record[0].reflection}</p>
-                        <h3>Emotions & Body Sensations</h3>
-                        <p>{this.props.record[0].feeling1} - {this.props.record[0].range1}% initial intensity, {this.props.record[0].reRange1}% re-rated intensity</p>
-                        <p>{this.props.record[0].feeling2} - {this.props.record[0].range2}% initial intensity, {this.props.record[0].reRange2}% re-rated intensity</p>
-                        <h3>Unhelpful Thoughts</h3>
-                        <div className="labelContainer">
-                            <p>Unhelpful thoughts/images:</p>
-                            <p>Supporting facts:</p>
-                            <p>Evidence against:</p>
-                            <p>Alternative, more realistic and balanced, perspective:</p>
-                        </div>
-                        <div className="inputTContainer">
-                            <p>{this.props.record[0].unhelpfulTh}</p>
-                            <p>{this.props.record[0].supportingFacts}</p>
-                            <p>{this.props.record[0].evidenceAg}</p>
-                            <p>{this.props.record[0].alternate}</p>
-                        </div>
+                            <h2>{this.props.record[0].date}</h2>
+                            <h3>Situation/Trigger</h3>
+                            <p>{this.props.record[0].situation}</p>
+                            <h3>Re-evaluated Outcome</h3>
+                            <p>{this.props.record[0].reflection}</p>
+                            <h3>Emotions & Body Sensations</h3>
+                            <p>{this.props.record[0].feeling1} - {this.props.record[0].range1}% initial intensity, {this.props.record[0].reRange1}% re-rated intensity</p>
+                            <p>{this.props.record[0].feeling2} - {this.props.record[0].range2}% initial intensity, {this.props.record[0].reRange2}% re-rated intensity</p>
+                            <h3>Unhelpful Thoughts</h3>
+                            <div className="labelContainer">
+                                <p>Unhelpful thoughts/images:</p>
+                                <p>Supporting facts:</p>
+                                <p>Evidence against:</p>
+                                <p>Alternative, more realistic and balanced, perspective:</p>
+                            </div>
+                            <div className="inputTContainer">
+                                <p>{this.props.record[0].unhelpfulTh}</p>
+                                <p>{this.props.record[0].supportingFacts}</p>
+                                <p>{this.props.record[0].evidenceAg}</p>
+                                <p>{this.props.record[0].alternate}</p>
+                            </div>
                         </Fragment>
                 }
             </div>

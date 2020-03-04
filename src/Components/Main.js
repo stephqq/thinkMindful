@@ -37,6 +37,12 @@ class Main extends Component {
         }
     }
 
+    closeOnSubmit = () => {
+        this.setState({
+            isCreating: !this.state.isCreating
+        })
+    }
+
     toggleError = () => {
         this.setState({
             isEditing: !this.state.isEditing
@@ -48,7 +54,7 @@ class Main extends Component {
             <main className="wrapper">
                 {
                     this.state.isCreating ?
-                        <Form handleClick={this.toggleForm} user={this.props.user} /> :
+                        <Form handleClick={this.toggleForm} closeOnSubmit={this.closeOnSubmit} user={this.props.user} /> :
                         <Fragment>
                             <Button handleClick={this.toggleForm} />
                             <Library user={this.props.user} toggleError={this.toggleError} />

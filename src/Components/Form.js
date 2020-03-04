@@ -138,7 +138,7 @@ class Form extends Component {
             reflection: '',
         })
 
-        this.props.handleClick();
+        this.props.closeOnSubmit();
     }
 
     render() {

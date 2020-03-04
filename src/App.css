@@ -71,6 +71,22 @@ main {
   min-height: 70vh;
 }
 
+section.logInSection {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+
+.logInContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* MAIN: SECTION: newThRd STYLING */
 
 section.newThRd {
@@ -304,6 +320,8 @@ textarea {
 
 .thRdLibrary h2 {
   font-family: 'Emilys Candy';
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
 .recordGallery h3 {
@@ -346,6 +364,28 @@ textarea {
   flex-direction: column;
 }
 
+.viewOptions {
+  align-self: center;
+}
+
+.viewOptions button {
+  margin: 0 15px;
+}
+
+.viewRecord h2,
+.viewRecord h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.viewRecord .labelContainer {
+  font-weight: 700;
+}
+
+.viewRecord .inputTContainer {
+  font-size: 1.8rem;
+}
+
 /* FOOTER STYLING */
 
 footer {
@@ -367,4 +407,27 @@ footer a {
 footer a:hover,
 footer a:focus {
   background: linear-gradient(164deg, rgb(254,202,208) 0%, rgb(166,224,239) 100%);
+}
+
+/* MEDIA QUERIES */
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .logInContainer {
+    width: 100%;
+  }
+
+  .logInContainer:not(:last-child) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
