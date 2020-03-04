@@ -63,7 +63,7 @@ class App extends Component {
             <main className="wrapper">
               <section className="logInSection">
                 <div className="logInContainer">
-                  <p>Welcome to think mindful!</p>
+                  <p>Welcome to think mindful! This is a CBT companion web application where you can keep a journal of your thought records.</p>
                   <p>For a demo of this app please use the following credentials:</p>
                   <p>username: demothinkmindful@gmail.com</p>
                   <p>password: demojuno</p>

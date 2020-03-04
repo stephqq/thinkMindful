@@ -111,10 +111,10 @@ class ViewRecord extends Component {
                                 <p>Alternative, more realistic and balanced, perspective:</p>
                             </div>
                             <div className="inputTContainer">
-                                <p>{this.props.record[0].unhelpfulTh}</p>
-                                <p>{this.props.record[0].supportingFacts}</p>
-                                <p>{this.props.record[0].evidenceAg}</p>
-                                <p>{this.props.record[0].alternate}</p>
+                                <p><span className="toHide">Unhelpful thoughts/images: </span>{this.props.record[0].unhelpfulTh}</p>
+                                <p><span className="toHide">Supporting facts: </span>{this.props.record[0].supportingFacts}</p>
+                                <p><span className="toHide">Evidence against: </span>{this.props.record[0].evidenceAg}</p>
+                                <p><span className="toHide">Alternative, more realistic and balanced, perspective: </span>{this.props.record[0].alternate}</p>
                             </div>
                         </Fragment>
                 }
